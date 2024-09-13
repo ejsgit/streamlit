@@ -1,8 +1,8 @@
 print("Hello, version 1 with Streamlit")
 
-import streamlit as st
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+import streamlit as st
 
 x = np.linspace(0, 2 * np.pi, 100)  # Generate 100 points between 0 and 2π
 y = np.sin(x)# Create a simple plot

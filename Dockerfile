@@ -6,4 +6,6 @@ ADD /app .
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "exemple.py" ]
+EXPOSE 8501
+
+CMD ["streamlit", "run", "exemple.py"]

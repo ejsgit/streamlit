@@ -2,9 +2,9 @@ FROM python:3.11
 
 WORKDIR /app
 
-ADD /app .
+COPY . .
 
-RUN pip install -r requirements.txt
+RUN pip install -r ./app/requirements.txt
 
 EXPOSE 8501
 

@@ -4,8 +4,8 @@ import numpy as np
 
 st.set_page_config(layout="wide")
 
-st.markdown("# Page 6 🎉")
-st.sidebar.markdown("# Page 6 🎉")
+st.markdown("# Graph Plot (Plotly) 6 🎉")
+st.sidebar.markdown("# Graph Plot (Plotly) 6 🎉")
 
 st.subheader("Plotly Line Chart")
 
@@ -40,7 +40,5 @@ fig.update_xaxes(rangeslider_visible=True, range=[0, 60])
                  
 fig.show()
 
-"""
-clickedPoint = preserveZoomPlotlyChart(fig, event='click')
-"""
+#clickedPoint = preserveZoomPlotlyChart(fig, event='click')
 

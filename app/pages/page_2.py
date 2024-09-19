@@ -1,7 +1,7 @@
 import streamlit as st
 
-st.markdown("# Page 2 ❄️")
-st.sidebar.markdown("# Page 2 ❄️")
+st.markdown("# Latex & Files (Panda) page 2 ❄️")
+st.sidebar.markdown("# Latex & Files (Panda) page 2 ❄️")
 
 import pandas as pd
 from io import StringIO

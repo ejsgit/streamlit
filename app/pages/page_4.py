@@ -2,8 +2,8 @@ import streamlit as st
 import graphviz
 
 
-st.markdown("# Page 4 🎉")
-st.sidebar.markdown("# Page 4 🎉")
+st.markdown("# State Machine (Graphviz) page 4 🎉")
+st.sidebar.markdown("# State Machine (Graphviz) page 4 🎉")
 
 # Create a graphlib graph object
 graph = graphviz.Digraph()

@@ -1,7 +1,7 @@
 import streamlit as st
 
-st.markdown("# Page 3 🎉")
-st.sidebar.markdown("# Page 3 🎉")
+st.markdown("# Map, Camera & Metric (Pandas) page 3 🎉")
+st.sidebar.markdown("# Map, Camera & Metric (Pandas) page 3 🎉")
 
 import streamlit as st
 import pandas as pd

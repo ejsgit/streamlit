@@ -14,19 +14,19 @@ Titles, markdown (translate to html)
 Latex
 State machine
 
+If necessary try with "sudo"
 
 Clone repo
 git clone https://github.com/ejsgit/streamlit.git
 
 Create venv, active and install requirement.txt
 python -m venv .venv etc.
+.venv/ /activate or source / /activate
 
-do : pip install -r requirements.txt
-LIB installed : streamlit, numpy, matplotlib, plotly, graphviz
+do : pip install -r requirements.txt (maybo cut this file in several ones)
+LIB installed : streamlit, numpy, matplotlib.pyplot, plotly, graphviz, pandas, StringIO, 
+scipy.io.wavfile
 
 streamlit run ./app/exemple.py
-
-
-
-
-e bar
+or 
+streamlit run .\app\exemple.py

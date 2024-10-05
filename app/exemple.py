@@ -3,9 +3,45 @@ print("Hello, version 2 with Streamlit and test func")
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
+import streamlit.components.v1 as components
+
+slider_html = """
+
+<style>
+input[type="range"] {
+  writing-mode: vertical-lr;
+}
+</style>
+
+<input type="range" id="volume" name="volume" min="0" max="100" />
+<label for="volume">H2</label>
+
+<script>
+    const slider = document.getElementById("volume");
+    slider.oninput = function() {
+        const value = parseInt(slider.value);
+        window.parent.postMessage({ value: value }, "*");
+</script>
+"""
+
+components.html(slider_html, height=400)
+
+# Capture the slider value
+#value = st.session_state.get("slider_value", 50)
+#st.write(f"Selected value: {value}")
+if st.session_state.get("slider_value") is None:
+    st.session_state.slider_value = 50  # Set initial value
+
+# Capture the value sent from the slider
+slider_value = st.session_state.slider_value
+st.write(f"Selected value: {slider_value}")
+
+value1 = st.slider("Select a value:", min_value=0, max_value=100, value=50, format="%d")
+st.write(f"Selected value: {value1}")
 
 st.title("Visualisation superposition de deux sinus de fréquences f1 et f2")
-st.subheader("Auteur : Rico")
+
+st.subheader("Auteur : RicoBrico")
 st.write("Voici une petit démo de ce qu'on peut faire avec les outils streamlit")
 
 st.markdown("# Graph Plot, audio, cursors (Numpy, Matplot) main page 🎈")
@@ -15,6 +51,9 @@ f1 = st.number_input(
     label="Fréquence f1",
     min_value=0,
     value=1
+)
+st.html(
+    "<p><span style='text-decoration: line-through double red;'>Oops</span>!</p>"
 )
 
 f2 = st.number_input(
@@ -27,6 +66,11 @@ r = st.slider(
     'f1/f2 amplitude ratio', 
     min_value=1,
     value=1)   # 👈 this is a widget
+
+h1 = st.slider(
+    'h1/f amplitude ratio', 
+    min_value=0,
+    value=50)   # 👈 this is a widget
 
 add_selectbox = st.sidebar.selectbox(
     'How would you like to be contacted?',

@@ -30,3 +30,10 @@ scipy.io.wavfile
 streamlit run ./app/exemple.py
 or 
 streamlit run .\app\exemple.py
+
+Code correction for :
+Page 1 : add vertical cursor
+Page 6 : use st.plotly_chart(fig) and study overflow problem. Remove 'start button', add text and value on the top of rows !
+Page 7 : show a video
+
+Add testAndDebug for checking part of python code on local machine python terminal !
